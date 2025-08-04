@@ -14,16 +14,6 @@
   --color-muted: #E5D8D0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark mode adjustments - you'll need to define dark mode values for your custom colors here */
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed; 
-    /* Example: adjust your custom colors for dark mode, e.g.: */
-    /* --color-accent: #A06C5C; */
-    /* --color-primaryText: #E0E0E0; */
-  }
-}
 
 body {
   background: var(--color-background);
