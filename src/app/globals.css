@@ -1,26 +1,45 @@
+/* globals.css */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Default (light mode) colors from your tailwind.config.ts */
+  --color-background: #FDFBF8;
+  --color-foreground: #4A4A4A; /* primaryText */
+  --color-accent: #C89F91;
+  --color-accentHover: #B08A7E;
+  --color-primaryText: #4A4A4A;
+  --color-secondaryText: #6F6F6F;
+  --color-highlight: #8A6E64;
+  --color-light: #F9F6F1;
+  --color-muted: #E5D8D0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark mode adjustments - you'll need to define dark mode values for your custom colors here */
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed; 
+    /* Example: adjust your custom colors for dark mode, e.g.: */
+    /* --color-accent: #A06C5C; */
+    /* --color-primaryText: #E0E0E0; */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Arial, Helvetica, sans-serif; /* Keep your existing font family */
+}
+
+/* Define your theme variables using the @theme directive, referencing the CSS variables */
+@theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-accent: var(--color-accent);
+  --color-accentHover: var(--color-accentHover);
+  --color-primaryText: var(--color-primaryText);
+  --color-secondaryText: var(--color-secondaryText);
+  --color-highlight: var(--color-highlight);
+  --color-light: var(--color-light);
+  --color-muted: var(--color-muted);
 }
